@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm/R2020a">
+  <slsa.mm.MaskTree type="slsa.mm.MaskTree" uuid="e2745415-be3b-426b-8ab4-cc600d33c535">
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="cbe96dc9-7ee8-461c-bfb9-20b0814c1db5">
+      <blockPath>RobotSimulation/Scopes/OpenLoop</blockPath>
+      <childrenIds>RobotSimulation:1077</childrenIds>
+      <childrenIds>RobotSimulation:1078</childrenIds>
+      <childrenIds>RobotSimulation:1079</childrenIds>
+      <id>RobotSimulation:1072</id>
+      <masks type="slsa.mm.Mask" uuid="3a0e6e1e-7d73-4dcf-ad23-d261ff0bf547">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="506fd784-bb5e-422d-becf-8ec7d55b0343">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>MPlanned</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="fee835de-1d59-4b70-aac1-57a0659f5dfd">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="fcd6bfb8-3e8e-49e8-907c-4fe6c6907e71">
+      <blockPath>RobotSimulation/Scopes/OpenLoop/Compute C</blockPath>
+      <id>RobotSimulation:1077</id>
+      <masks type="slsa.mm.Mask" uuid="26ef237a-e770-4a12-b421-aa3105770a55">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="700802eb-e3c8-4542-9515-9dfb97982572">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="0c4ddbba-04ca-4bb6-8ebf-66a090b00d0d">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>RobotSimulation:1072</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RobotSimulation:1072</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="87230e43-cfb0-485b-9495-41daf0042973">
+      <blockPath>RobotSimulation/Scopes/OpenLoop/Compute G</blockPath>
+      <id>RobotSimulation:1078</id>
+      <masks type="slsa.mm.Mask" uuid="a7a02392-c2a8-4c53-9a45-f79f0adaa09f">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5933655f-dfa9-4a41-b035-59b31822acd7">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="15766ed4-5388-4fb9-a8e7-b191fbfd6fcd">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>RobotSimulation:1072</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RobotSimulation:1072</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="fd3bd077-be11-47a1-aa30-c2b843fd5e29">
+      <blockPath>RobotSimulation/Scopes/OpenLoop/Compute H</blockPath>
+      <id>RobotSimulation:1079</id>
+      <masks type="slsa.mm.Mask" uuid="012d3c4b-ed28-41d8-8a0d-75d16e48f135">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d4dbd1ef-8647-47d7-ad9a-7f88a0adafed">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="dd42eaa8-0456-4a0a-87a9-5d0f17efd8f6">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>RobotSimulation:1072</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RobotSimulation:1072</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="68ec6602-8d57-4d96-bf2c-ef03c75cd2ce">
+      <blockPath>RobotSimulation/Scopes/Discrete Derivative</blockPath>
+      <id>RobotSimulation:1103</id>
+      <masks type="slsa.mm.Mask" uuid="8334d8ff-f344-4b4f-8ef4-9d3a56ff5b22">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="89fd70dc-4a95-48b6-8b29-d16298d380d3">
+          <evaluate>true</evaluate>
+          <expression>1.0</expression>
+          <name>gainval</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="7fbd8fb5-1cd4-484a-b881-bacc743eda70">
+          <evaluate>true</evaluate>
+          <expression>0.0</expression>
+          <isTunable>true</isTunable>
+          <name>ICPrevScaledInput</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="320c4e1c-9985-4b6a-9a3e-0182aba006c6">
+          <expression>Elements as channels (sample based)</expression>
+          <name>InputProcessing</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="de616ecf-862c-4af5-be92-98a8c903ee73">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>OutMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="c45a53e4-d3e1-4895-ab4e-81148d0db8db">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>OutMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f2566548-dc4f-43dc-bf6a-f1c3afd5f646">
+          <evaluate>true</evaluate>
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="6fe74591-b22b-4374-a130-876e293b86c7">
+          <expression>Inherit via internal rule</expression>
+          <name>OutputDataTypeScalingMode</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="7f4b2bdd-e8ab-44f8-a934-f96eef6ef4c6">
+          <evaluate>true</evaluate>
+          <expression>fixdt(1, 16)</expression>
+          <name>OutDataType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="24d81a55-fa0e-4c99-a216-f1f0fc5cc9ab">
+          <evaluate>true</evaluate>
+          <expression>2^-10</expression>
+          <name>OutScaling</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d287badf-1248-4e22-8127-65409c5630a5">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>LockScale</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="19733af2-ccb2-44db-b833-92a58c84eb0c">
+          <expression>Floor</expression>
+          <name>RndMeth</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="3217101e-fd38-4906-8c16-c3d6284fcfb0">
+          <expression>off</expression>
+          <name>DoSatur</name>
+        </dialogParameters>
+        <initializationCode>
+blkH = gcbh;
+blkName = getfullname(blkH);
+
+if (gainval == 0.0)
+    %avoid divide by zero warning
+    inverseGainval = inf;
+else
+    inverseGainval = 1.0/double(gainval);
+end
+
+if isequal(OutDataTypeStr, &apos;Inherit: Inherit via internal rule&apos;)
+    diffDT   = &apos;Inherit: Inherit via back propagation&apos;;
+    tsampDT  = &apos;Inherit: Inherit via internal rule&apos;;
+    tsampImp = &apos;Offline Scaling Adjustment&apos;;
+else    
+    diffDT   = OutDataTypeStr;
+    tsampDT  = &apos;Inherit: Inherit via back propagation&apos;;
+    tsampImp = &apos;Online Calculations&apos;;
+end
+
+if ~strcmp(get_param(bdroot(blkH),&apos;SimulationStatus&apos;), &apos;running&apos;)
+    set_param([blkName,&apos;/Diff&apos;], ...
+              &apos;RndMeth&apos;,RndMeth, ...
+	          &apos;DoSatur&apos;,DoSatur);
+    set_param([blkName,&apos;/TSamp&apos;], ...
+              &apos;OutDataTypeStr&apos;,tsampDT, ...
+              &apos;RndMeth&apos;,RndMeth, ...
+              &apos;DoSatur&apos;,DoSatur, ...
+              &apos;TsampMathImp&apos;,tsampImp);
+end
+
+set_param([blkName,&apos;/UD&apos;], ...
+	&apos;InputProcessing&apos;,InputProcessing);
+</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="6d16679e-fc90-478c-8447-f9d5324fdeb3">
+      <blockPath>RobotSimulation/High level Controllers/OpenLoop</blockPath>
+      <id>RobotSimulation:1107</id>
+      <masks type="slsa.mm.Mask" uuid="f2f667f1-295b-4e02-8ce9-6f0d1ee26784">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="ee25fc5b-ec09-448e-9ec5-b7a54c2a6430">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>MPlanned</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="c42f6e05-4a0a-4f3e-836c-033fd759edef">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="38075bce-35c6-47b9-8ff3-63067153e42c">
+      <blockPath>RobotSimulation/Scopes/bounds - percentile error</blockPath>
+      <id>RobotSimulation:1409</id>
+      <masks type="slsa.mm.Mask" uuid="4021d9c7-6da9-4234-b9c0-8f25b67d25b2">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="c4793b1a-61d5-4f77-9dd6-6bb82851b30f">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>enabled</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="fb17bb38-eb73-4fff-8739-f04e85d34eb2">
+          <name>callback</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="4f731f5f-2709-499b-80be-90da4d275247">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>stopWhenAssertionFail</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="6943f0e3-e7d3-4c5b-ae4c-91d1c8570256">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>export</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="44847061-5db9-42ba-b0f2-277428557136">
+          <evaluate>true</evaluate>
+          <expression>[100 200 510 390]</expression>
+          <name>ViewDlgPos</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="996248b2-79fa-4b02-80a3-500c19ffa4ac">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>OpenViewOnLoad</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f0e83b18-d9eb-4b3d-a1a9-efb246ee021f">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>LaunchViewOnOpen</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="c0f30a2a-b922-4dfd-9505-d47643ef4538">
+          <expression>seconds</expression>
+          <name>TimeUnits</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="0ccd6b53-9a18-4236-9b2d-b681878d7e4a">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>EnableUpperBound</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="8edef1f0-f402-47e4-89fc-bbfc9528ec15">
+          <evaluate>true</evaluate>
+          <expression>[0.7 1.5; 1.5 2.5;]</expression>
+          <name>UpperBoundTimes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="10a1b638-6627-4c77-a3fd-34db06c0a393">
+          <evaluate>true</evaluate>
+          <expression>[5 5; 0.1 0.1;]</expression>
+          <name>UpperBoundAmplitudes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="8e35ed4e-732e-4db7-a1b0-25a8011a24cf">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>EnableLowerBound</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="1ae995d0-8567-4c55-a9dc-21cb516b1eee">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>LowerBoundTimes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="19e3b6aa-93fe-4e55-9cc2-1498e4da9c9d">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>LowerBoundAmplitudes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="7958638c-9ed1-4db4-b0ba-013f1c244ea2">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>checkpack.CheckCustomBoundsDlg.configBlk(gcbh)</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="fd7700e1-f67d-48c7-ad87-ac5033261b9c">
+      <blockPath>RobotSimulation/Scopes/bounds - abs tau1</blockPath>
+      <id>RobotSimulation:1417</id>
+      <masks type="slsa.mm.Mask" uuid="a2041ea7-7741-4a7e-ba1c-f38b9ad7b064">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5d881da1-2aea-47ee-82e0-b00fa5431738">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>enabled</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="4044eba5-bd06-499f-9b29-ee03da989950">
+          <name>callback</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="a705e17e-7d6f-4623-9f28-6f5726c2c054">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>stopWhenAssertionFail</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="c7f5a94e-a2c9-4348-bfa8-675ebfcb50bd">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>export</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="72fd71a1-109f-4fcc-9fea-53d132004e75">
+          <evaluate>true</evaluate>
+          <expression>[100 200 510 390]</expression>
+          <name>ViewDlgPos</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="943c46cb-158d-4319-ae10-9d1ab3ba5df4">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>OpenViewOnLoad</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="3d2e1ca1-43a7-41ed-9a69-b68b3c035142">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>LaunchViewOnOpen</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="a8de4c93-3d1e-4eab-b674-63bfd23e6361">
+          <expression>seconds</expression>
+          <name>TimeUnits</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="46739018-8b63-4836-a523-84672631fa94">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>EnableUpperBound</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="69b91b2d-bdb0-4e26-ae45-bd47a5c4d555">
+          <evaluate>true</evaluate>
+          <expression>[0, 2.5]</expression>
+          <name>UpperBoundTimes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="34b88334-244a-4473-995e-c104058fb8a8">
+          <evaluate>true</evaluate>
+          <expression>[1 1]*10</expression>
+          <name>UpperBoundAmplitudes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="2b40ed6d-e223-42b6-8dc1-9344d90dafcb">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>EnableLowerBound</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="4fda5a0a-b600-4fa5-9f74-2337dbf4203b">
+          <evaluate>true</evaluate>
+          <expression>[0,0.]</expression>
+          <name>LowerBoundTimes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="7bb59c81-2c94-45be-a496-e13726adb180">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>LowerBoundAmplitudes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="490ae34c-130a-4338-81af-f918c82ed0eb">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>checkpack.CheckCustomBoundsDlg.configBlk(gcbh)</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="f85ccea3-1dfa-4150-8d8e-c6b2b67d37df">
+      <blockPath>RobotSimulation/Scopes/bounds - abs tau2</blockPath>
+      <id>RobotSimulation:1419</id>
+      <masks type="slsa.mm.Mask" uuid="5207bba2-f7c1-4a31-9971-50c3d7710ad5">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="288884fd-5af4-4843-9bb3-954565d1d88b">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>enabled</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d6e63054-5229-47b3-89f7-d718bb3d7ec2">
+          <name>callback</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="22ab9f0b-7234-4cb5-85b5-97d4c1e85d23">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>stopWhenAssertionFail</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="084db33f-881f-48f0-9382-0855091000eb">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>export</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d12195af-f72d-429a-a249-2ddfbfe8e7f2">
+          <evaluate>true</evaluate>
+          <expression>[100 200 510 390]</expression>
+          <name>ViewDlgPos</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="8ca7e9b2-8c9b-48d3-9d9e-537588c0e872">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>OpenViewOnLoad</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="38d68b88-68ca-4b96-a7af-57b767df1dd8">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>LaunchViewOnOpen</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="0e62a19b-f0f1-463b-b329-e79f1280239e">
+          <expression>seconds</expression>
+          <name>TimeUnits</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="3acb81b7-735a-4c2e-857c-4abc7cef5587">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>EnableUpperBound</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5d97e151-dec1-4a74-ab85-511e6565af95">
+          <evaluate>true</evaluate>
+          <expression>[0, 2.5]</expression>
+          <name>UpperBoundTimes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="980259ce-f00b-41d3-b1ca-65611cf5c1e5">
+          <evaluate>true</evaluate>
+          <expression>[2 2]*10</expression>
+          <name>UpperBoundAmplitudes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="58f77b4a-0469-4587-93db-25b4831b40c6">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>EnableLowerBound</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="38acd789-0d74-4d99-ab34-ed5ffd0df411">
+          <evaluate>true</evaluate>
+          <expression>[0,0.]</expression>
+          <name>LowerBoundTimes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="40dfc968-7aa7-44b4-bd9b-7371b8afc5fb">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>LowerBoundAmplitudes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="ba613829-3806-487d-a0f4-cd7b280bff24">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>checkpack.CheckCustomBoundsDlg.configBlk(gcbh)</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="daba6b47-0921-4d45-a5dc-f9d849bc430f">
+      <blockPath>RobotSimulation/Scopes/bounds - abs tau3</blockPath>
+      <id>RobotSimulation:1420</id>
+      <masks type="slsa.mm.Mask" uuid="61074295-d140-4e81-91b3-330afa575f73">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d3167d3f-402a-4e8e-ad97-08ba62e81bc2">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>enabled</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="57fb89d9-5e05-4f2c-afc4-6f1879de5b36">
+          <name>callback</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="8712405d-6376-4bad-ad7e-084868167931">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>stopWhenAssertionFail</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="83b3012f-51bc-4b17-96ff-05d19ffa490e">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>export</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="4e9ff155-378c-4fc1-9968-7c06284f3a7a">
+          <evaluate>true</evaluate>
+          <expression>[100 200 510 390]</expression>
+          <name>ViewDlgPos</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="9c866f96-fffb-4dcf-b932-7ff70bd32868">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>OpenViewOnLoad</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="6e6117f3-2436-4b4a-8329-3636cf9e9a9b">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>LaunchViewOnOpen</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5ca80d9a-385e-454d-b7d5-2ce53bc91cca">
+          <expression>seconds</expression>
+          <name>TimeUnits</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="73e5827b-1705-49e2-8aaa-ac19afc116cb">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>EnableUpperBound</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f5388657-e74c-4e75-8663-1e4d67e4a0b2">
+          <evaluate>true</evaluate>
+          <expression>[0 2.5]</expression>
+          <name>UpperBoundTimes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="4f584e7a-08d8-4b1b-ac4e-dad8c597baf7">
+          <evaluate>true</evaluate>
+          <expression>[6 6]*10</expression>
+          <name>UpperBoundAmplitudes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="232b42ec-8881-4ecc-8484-e763ccb6a168">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>EnableLowerBound</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="6a921746-4016-4999-bea0-9dc79346d9f6">
+          <evaluate>true</evaluate>
+          <expression>[0,0.]</expression>
+          <name>LowerBoundTimes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="a981d286-c863-4ca8-8241-bf4ed1c2b967">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>LowerBoundAmplitudes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="10d46b59-a251-4004-9b3d-6be8c28b40fd">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>checkpack.CheckCustomBoundsDlg.configBlk(gcbh)</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="d6f4bf76-14b6-4322-a3d9-30986743cd71">
+      <blockPath>RobotSimulation/Initialize Function/Inverse Kinematics</blockPath>
+      <id>RobotSimulation:656</id>
+      <masks type="slsa.mm.Mask" uuid="7329a98a-f5cf-4669-8d81-dbac2bdfb1ff">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d48c0704-dabc-4c8d-9e1d-2523429aaaa3">
+          <evaluate>true</evaluate>
+          <expression>elbows</expression>
+          <isTunable>true</isTunable>
+          <name>elbows</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="18cea25d-8e73-4e97-a8d9-7c0c473dd1d3">
+            <name>elbows</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="07f7e168-7190-4d66-9680-7a40b165171f">
+          <evaluate>true</evaluate>
+          <expression>H</expression>
+          <isTunable>true</isTunable>
+          <name>H</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="db8cc87d-9147-4222-aa30-030a48b1f235">
+            <name>H</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="7c7b7fef-01a7-4ae5-9a16-0b4fcf4c6de4">
+          <evaluate>true</evaluate>
+          <expression>L</expression>
+          <isTunable>true</isTunable>
+          <name>L</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="3caafcd5-3a9e-4bfc-9bf8-0dc1b20bf5d4">
+            <name>L</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="23fb1824-8dee-4d0b-843c-1be10d19627c">
+      <blockPath>RobotSimulation/Reference Builder/Inverse Kinematics</blockPath>
+      <id>RobotSimulation:672</id>
+      <masks type="slsa.mm.Mask" uuid="b67cc8e2-cc09-496a-b8a0-6dda0c7bf896">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="3cbc1f6a-ccdf-4727-b989-10d9eda52af5">
+          <evaluate>true</evaluate>
+          <expression>elbows</expression>
+          <isTunable>true</isTunable>
+          <name>elbows</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="aa33426b-c5c4-4678-9c92-d1cdeb8060e3">
+            <name>elbows</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5abe0040-7a7e-46c8-9b66-b61e99b2a85b">
+          <evaluate>true</evaluate>
+          <expression>H</expression>
+          <isTunable>true</isTunable>
+          <name>H</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="de9ccfef-a723-483e-b0b3-e406cd1602d1">
+            <name>H</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="edd0dbd4-ab3d-425f-9605-451beec99617">
+          <evaluate>true</evaluate>
+          <expression>L</expression>
+          <isTunable>true</isTunable>
+          <name>L</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="b04118f5-b52b-40a2-9a18-8eebb56ba204">
+            <name>L</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="3039fbbe-582a-4972-a291-c70b4a166aaa">
+      <blockPath>RobotSimulation/Sensor Analyzer/LPF for qdot</blockPath>
+      <id>RobotSimulation:730</id>
+      <masks type="slsa.mm.Mask" uuid="21a7be73-f8df-4c01-8d87-d8cbfe5b420b">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="66e748a5-6d41-4d0b-9ded-4470cf003f66">
+          <evaluate>true</evaluate>
+          <expression>100</expression>
+          <isTunable>true</isTunable>
+          <name>Freq</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="ecb827b8-c6c6-413c-9dfc-2007c1167e5e">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>s0</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="cb96a7bb-4403-48bb-bc3c-c800e17ab195">
+      <blockPath>RobotSimulation/Sensor Analyzer/LPF2 for qdot2</blockPath>
+      <id>RobotSimulation:731</id>
+      <masks type="slsa.mm.Mask" uuid="3fbf3692-78fe-417d-94af-3d364729216f">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="706a6e5d-e02c-4cf4-82ba-0da8d0812792">
+          <evaluate>true</evaluate>
+          <expression>50</expression>
+          <isTunable>true</isTunable>
+          <name>Freq</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="4fe6661a-efdc-4603-8d7e-2eacc61ec18c">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>s0</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="58911063-ef73-4941-9ec3-44491cbf3c19">
+      <blockPath>RobotSimulation/Sensor Analyzer/LPF1 for qdot2</blockPath>
+      <id>RobotSimulation:780</id>
+      <masks type="slsa.mm.Mask" uuid="fe2594b1-0c5b-428e-bb20-2e7a1461ed5f">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="0a4326de-1234-40a8-ac6d-e4b5dadf593e">
+          <evaluate>true</evaluate>
+          <expression>50</expression>
+          <isTunable>true</isTunable>
+          <name>Freq</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="664985a1-c499-457f-a1fd-5b2176c8259b">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>s0</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="0c1ddf6c-fbc9-454d-abf4-a5b7e60e50d2">
+      <blockPath>RobotSimulation/Plant/Compute C</blockPath>
+      <id>RobotSimulation:785</id>
+      <masks type="slsa.mm.Mask" uuid="f1a616c3-01cf-42f7-a66f-71e6666c3fbf">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f222bfe6-9eb2-4e85-966f-9549f764befc">
+          <evaluate>true</evaluate>
+          <expression>MActual</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="983299f6-ac1d-420e-9372-b5ff28dd6b18">
+            <name>MActual</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="00074da1-91f6-425a-b664-b017664afd0a">
+      <blockPath>RobotSimulation/Plant/Compute G</blockPath>
+      <id>RobotSimulation:786</id>
+      <masks type="slsa.mm.Mask" uuid="c1c838aa-ee4f-4baf-a542-b2562a36961a">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="3ab44a54-eae4-4b1a-838f-bea5c3666a9d">
+          <evaluate>true</evaluate>
+          <expression>MActual</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="01b63b9d-521e-4e76-bca3-0b5ffbbe9a0f">
+            <name>MActual</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="5cc4b7b2-0b9e-427f-a605-a60276f835d3">
+      <blockPath>RobotSimulation/Plant/Compute H</blockPath>
+      <id>RobotSimulation:787</id>
+      <masks type="slsa.mm.Mask" uuid="341dfc83-b2b7-4b93-ae0d-2b1206066030">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="014b5964-bf68-4980-a765-a7829f0ca36f">
+          <evaluate>true</evaluate>
+          <expression>MActual</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="7907acc5-fdda-4c77-a8f8-26f1ed7becab">
+            <name>MActual</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="5caca8e9-23df-4d8a-bb3b-c1ade26349fa">
+      <blockPath>RobotSimulation/High level Controllers/Inverse Dynamics + PD</blockPath>
+      <childrenIds>RobotSimulation:839</childrenIds>
+      <childrenIds>RobotSimulation:840</childrenIds>
+      <childrenIds>RobotSimulation:841</childrenIds>
+      <childrenIds>RobotSimulation:842</childrenIds>
+      <id>RobotSimulation:831</id>
+      <masks type="slsa.mm.Mask" uuid="1259b5e1-8262-4e20-af93-1b0d8d3fe123">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="7197fe61-5f5a-4c32-a64b-ecc396cb8a65">
+          <evaluate>true</evaluate>
+          <expression>5*100/9*[1,2,1]</expression>
+          <isTunable>true</isTunable>
+          <name>Kp</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="e1b5591a-a804-4be2-9b22-52a7246abb56">
+          <evaluate>true</evaluate>
+          <expression>1.5*20/3*[1,1,1]</expression>
+          <isTunable>true</isTunable>
+          <name>Kd</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="b4f0e331-98b8-4879-8448-53d0afe17449">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>MPlanned</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="2b14cdca-0aab-4316-9c89-550f86e7a066">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="fb50ef69-62ab-42d4-ac3b-ca38d426354c">
+      <blockPath>RobotSimulation/High level Controllers/Inverse Dynamics + PD/Compute C</blockPath>
+      <id>RobotSimulation:839</id>
+      <masks type="slsa.mm.Mask" uuid="35ded0b7-e3d6-46db-aa9e-dca4c03b1b11">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="0c252348-c144-4fbd-8c5f-f6949c03f014">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="7432b466-8ed8-40a8-9036-99b1fbbb1bdd">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>RobotSimulation:831</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RobotSimulation:831</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="89ce3918-b3a3-4c76-9bb3-719beafabe36">
+      <blockPath>RobotSimulation/High level Controllers/Inverse Dynamics + PD/Compute G</blockPath>
+      <id>RobotSimulation:840</id>
+      <masks type="slsa.mm.Mask" uuid="3dbbfbaf-6ec5-4ffc-a301-8c999f4830c5">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="599e7789-a63d-48bc-9ad4-6dc45cd9ce62">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="eaa45a33-be9c-4602-803f-118fb5854918">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>RobotSimulation:831</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RobotSimulation:831</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="53f1c2b0-ddec-4a60-bc38-b559ea4c1ba2">
+      <blockPath>RobotSimulation/High level Controllers/Inverse Dynamics + PD/Compute H</blockPath>
+      <id>RobotSimulation:841</id>
+      <masks type="slsa.mm.Mask" uuid="fd219817-7f4b-429e-aa8e-cc485e07db33">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="1c8e9fdb-c10f-4de2-8bb5-49d107275e6f">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="cd98120b-a2d5-4c8b-8fdd-5a68c1da3442">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>RobotSimulation:831</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RobotSimulation:831</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="07468343-b375-49fe-ae79-d2a15c47c560">
+      <blockPath>RobotSimulation/High level Controllers/Inverse Dynamics + PD/Compute H1</blockPath>
+      <id>RobotSimulation:842</id>
+      <masks type="slsa.mm.Mask" uuid="6bdf5088-3da9-4bf2-bb71-4a7b4a4d3cff">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="e525a826-d33f-479a-ac01-7841625f8b8d">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="4bf5c1a0-2450-4e2f-8af2-a93501bcbc0b">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>RobotSimulation:831</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RobotSimulation:831</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="19528a93-a397-436d-bb6f-e36d34f3e44a">
+      <blockPath>RobotSimulation/Reference Builder/MinJerk Trajectory Planner</blockPath>
+      <id>RobotSimulation:894</id>
+      <masks type="slsa.mm.Mask" uuid="7809629b-9261-4084-a3fe-c2202c08d228">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="08a1c09b-03dd-4e4f-9280-f4229146e7cf">
+          <evaluate>true</evaluate>
+          <expression>P0</expression>
+          <isTunable>true</isTunable>
+          <name>P0</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="457b4d0a-994f-4c6c-a6d3-e826553ab455">
+            <name>P0</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="ffced5c6-a291-4676-a68c-c93cbc48f3be">
+          <evaluate>true</evaluate>
+          <expression>Pf</expression>
+          <isTunable>true</isTunable>
+          <name>Pf</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="ba60b1d3-c0dc-40f2-a732-4537879008ba">
+            <name>Pf</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="78ffc917-c6cb-4a4e-b5fc-e8ec7fa3f67d">
+          <evaluate>true</evaluate>
+          <expression>T</expression>
+          <isTunable>true</isTunable>
+          <name>T</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="2afad178-32b3-4390-ba76-67af7d4fd363">
+            <name>T</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="74e8e1b3-d2f3-4ad0-805d-22fbbb7fb50c">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>Tbreaks</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="16bc9f8e-7384-4d50-ad57-841890daa583">
+      <blockPath>RobotSimulation/Initialize Function/MinJerk Trajectory Planner</blockPath>
+      <id>RobotSimulation:895</id>
+      <masks type="slsa.mm.Mask" uuid="bba909f0-c5ad-4bad-9369-cbee67650b24">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="43e4f1d9-24bc-4c3e-9e9e-d71e4d4bc2f8">
+          <evaluate>true</evaluate>
+          <expression>P0+[0;0;0.1]</expression>
+          <isTunable>true</isTunable>
+          <name>P0</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="759ed8ff-98f0-4a3c-b9b3-44172c452e08">
+            <name>P0</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="9898df41-ed06-4627-948f-3f9df18dc00d">
+          <evaluate>true</evaluate>
+          <expression>Pf</expression>
+          <isTunable>true</isTunable>
+          <name>Pf</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="35ca4188-de12-40aa-9423-3cc70c5747f3">
+            <name>Pf</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="4c29b269-ed04-4bae-9af7-5ab3cfcf81ff">
+          <evaluate>true</evaluate>
+          <expression>T</expression>
+          <isTunable>true</isTunable>
+          <name>T</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="1e896b0c-8511-42b8-9b5c-7cbb239fe4af">
+            <name>T</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="15fba4ac-7ce7-47a3-b371-52b7a76fb186">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>Tbreaks</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="71b6361a-a71b-41f0-8279-47dc193dd16e">
+      <blockPath>RobotSimulation/High level Controllers/Gravity Compensation + PD</blockPath>
+      <childrenIds>RobotSimulation:907</childrenIds>
+      <id>RobotSimulation:899</id>
+      <masks type="slsa.mm.Mask" uuid="435be05b-6ee5-40bb-a88f-39090942e9de">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="e44a5e58-5bea-4b2d-8093-6cb7a172695b">
+          <evaluate>true</evaluate>
+          <expression>CP2_Kp_row1</expression>
+          <isTunable>true</isTunable>
+          <name>Kp_row1</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="92da6a27-fc5a-4b7b-bf32-49ff22697d4c">
+            <name>CP2_Kp_row1</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="97045f9e-9933-41f6-8d9b-88cd5fc87b99">
+          <evaluate>true</evaluate>
+          <expression>CP2_Kp_row2</expression>
+          <isTunable>true</isTunable>
+          <name>Kp_row2</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="acd9ff5f-68fb-4e01-8e5d-facea60f17c0">
+            <name>CP2_Kp_row2</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="2f336c89-60ab-4540-9659-0c725d1d3d32">
+          <evaluate>true</evaluate>
+          <expression>CP2_Kp_row3</expression>
+          <isTunable>true</isTunable>
+          <name>Kp_row3</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="7016f526-df6d-4c73-a718-142966ed2107">
+            <name>CP2_Kp_row3</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="066365ad-f866-414c-9052-cc82a66bf41c">
+          <evaluate>true</evaluate>
+          <expression>CP2_Kd_row1</expression>
+          <isTunable>true</isTunable>
+          <name>Kd_row1</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="df6acff5-0f1b-43e2-ac58-4227b83433c3">
+            <name>CP2_Kd_row1</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="1a5b2c47-98a3-4e43-88b9-70d9a2016496">
+          <evaluate>true</evaluate>
+          <expression>CP2_Kd_row2</expression>
+          <isTunable>true</isTunable>
+          <name>Kd_row2</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="6d636740-ec69-4cee-9488-7186f0a4d0e4">
+            <name>CP2_Kd_row2</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5a27dd29-eb6f-4508-9623-aff7acf864e1">
+          <evaluate>true</evaluate>
+          <expression>CP2_Kd_row3</expression>
+          <isTunable>true</isTunable>
+          <name>Kd_row3</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="0d84960d-1ac2-48c4-9434-6912a22d4832">
+            <name>CP2_Kd_row3</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="cb231654-459f-4243-b5a5-12326d9f6b61">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>MPlanned</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="725ac5b6-1ad1-4029-a74c-4eb8e12a040c">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="ca61a860-cab3-40d7-85e2-ae60a2e39f86">
+      <blockPath>RobotSimulation/High level Controllers/Gravity Compensation + PD/Compute G</blockPath>
+      <id>RobotSimulation:907</id>
+      <masks type="slsa.mm.Mask" uuid="720d01b3-f81c-481d-8a16-9c8c3808579a">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="7c300032-6116-4f03-b297-9f5ad4316ab8">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>M</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="70cb42a9-c414-48c9-b23b-84d883f0a767">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>RobotSimulation:899</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>RobotSimulation:899</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="c83fdcb6-dce2-4bf7-8545-453ef59d0061">
+      <blockPath>RobotSimulation/High level Controllers/PID</blockPath>
+      <id>RobotSimulation:953</id>
+      <masks type="slsa.mm.Mask" uuid="0ef6398c-db4f-4c96-895e-ba89f1728b19">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="37c79269-75ab-4641-a045-5146549862b7">
+          <evaluate>true</evaluate>
+          <expression>[0,0,0]</expression>
+          <isTunable>true</isTunable>
+          <name>Kp_row1</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="711fcef0-d119-45a5-919d-214c32bd1e4c">
+          <evaluate>true</evaluate>
+          <expression>[0,0,0]</expression>
+          <isTunable>true</isTunable>
+          <name>Kp_row2</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="733c3f98-9e16-46be-abcd-10629af44b69">
+          <evaluate>true</evaluate>
+          <expression>[0,0,0]</expression>
+          <isTunable>true</isTunable>
+          <name>Kp_row3</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="c98a1b73-ffa9-472d-822f-3ba1ebee7700">
+          <evaluate>true</evaluate>
+          <expression>[0,0,0]</expression>
+          <isTunable>true</isTunable>
+          <name>Kd_row1</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="2701d673-52a6-443b-9381-af438b6e4499">
+          <evaluate>true</evaluate>
+          <expression>[0,0,0]</expression>
+          <isTunable>true</isTunable>
+          <name>Kd_row2</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="bd36260a-112e-449d-aa55-69130cb92aa2">
+          <evaluate>true</evaluate>
+          <expression>[0,0,0]</expression>
+          <isTunable>true</isTunable>
+          <name>Kd_row3</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d2a5c502-2d66-4ada-b414-82aad6126d7a">
+          <evaluate>true</evaluate>
+          <expression>[0,0,0]</expression>
+          <isTunable>true</isTunable>
+          <name>Ki_row1</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="1d9398be-bc9a-4a73-9da4-ff1d86f35752">
+          <evaluate>true</evaluate>
+          <expression>[0,0,0]</expression>
+          <isTunable>true</isTunable>
+          <name>Ki_row2</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="972955e9-2098-44d7-9827-af5a7787f66d">
+          <evaluate>true</evaluate>
+          <expression>[0,0,0]</expression>
+          <isTunable>true</isTunable>
+          <name>Ki_row3</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f617f558-f00d-4bb8-a172-de831916efc2">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>MPlanned</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="b8a605a4-7ca0-4b84-9008-ec9ece5a5a4b">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="f162df83-ecc5-43ad-8b1b-9823cbb86e6f">
+      <blockPath>RobotSimulation/High level Controllers/Adaptive Control</blockPath>
+      <id>RobotSimulation:980</id>
+      <masks type="slsa.mm.Mask" uuid="747e0fba-e2f5-4c52-83b1-f3cc20cf53bb">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="a3db0dc4-ac0b-45dd-b8d5-d97a5f2bcce1">
+          <evaluate>true</evaluate>
+          <expression>Kp_C2</expression>
+          <isTunable>true</isTunable>
+          <name>Kp</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="03728526-c4eb-4bd1-8bcf-2de228c8c7f7">
+          <evaluate>true</evaluate>
+          <expression>Kd_C2</expression>
+          <isTunable>true</isTunable>
+          <name>Kd</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d9bc59c4-5ac3-4409-9763-211228acda7c">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>MPlanned</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="1d35dcb7-f3a6-4dba-b85a-778c47f2cc38">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="8349de6f-19fc-45ff-9918-9960a02a9863">
+      <blockPath>RobotSimulation/High level Controllers/MINMAX</blockPath>
+      <id>RobotSimulation:998</id>
+      <masks type="slsa.mm.Mask" uuid="09c4d7c6-1569-4148-8780-df200ae0e0a0">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="da525d09-e1a5-4763-b68d-756cee68b40c">
+          <evaluate>true</evaluate>
+          <expression>Kp_C2</expression>
+          <isTunable>true</isTunable>
+          <name>Kp</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="378e8c16-0bdb-40ab-850c-fda189ec1284">
+          <evaluate>true</evaluate>
+          <expression>Kd_C2</expression>
+          <isTunable>true</isTunable>
+          <name>Kd</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d4eca874-2c07-4a2d-a99a-ba38954dc5e2">
+          <evaluate>true</evaluate>
+          <expression>MPlanned</expression>
+          <isTunable>true</isTunable>
+          <name>MPlanned</name>
+          <referencedVariables type="slsa.mm.Variable" uuid="4e4437d4-7f95-429e-875e-6a8221a4d2fd">
+            <name>MPlanned</name>
+            <value></value>
+            <workspace>model-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="d6fd2a36-c8a7-46e1-bd35-02f7f18496a0">
+      <childrenIds>RobotSimulation:1072</childrenIds>
+      <childrenIds>RobotSimulation:1103</childrenIds>
+      <childrenIds>RobotSimulation:1107</childrenIds>
+      <childrenIds>RobotSimulation:1409</childrenIds>
+      <childrenIds>RobotSimulation:1417</childrenIds>
+      <childrenIds>RobotSimulation:1419</childrenIds>
+      <childrenIds>RobotSimulation:1420</childrenIds>
+      <childrenIds>RobotSimulation:656</childrenIds>
+      <childrenIds>RobotSimulation:672</childrenIds>
+      <childrenIds>RobotSimulation:730</childrenIds>
+      <childrenIds>RobotSimulation:731</childrenIds>
+      <childrenIds>RobotSimulation:780</childrenIds>
+      <childrenIds>RobotSimulation:785</childrenIds>
+      <childrenIds>RobotSimulation:786</childrenIds>
+      <childrenIds>RobotSimulation:787</childrenIds>
+      <childrenIds>RobotSimulation:831</childrenIds>
+      <childrenIds>RobotSimulation:894</childrenIds>
+      <childrenIds>RobotSimulation:895</childrenIds>
+      <childrenIds>RobotSimulation:899</childrenIds>
+      <childrenIds>RobotSimulation:953</childrenIds>
+      <childrenIds>RobotSimulation:980</childrenIds>
+      <childrenIds>RobotSimulation:998</childrenIds>
+      <id>root</id>
+    </maskedBlocks>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="ff2ded0f-fa88-4d8c-b5cb-bf8e321af3d6">
+      <name>CP2_Kd_row1</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAADAAAAAQAAAAAAAAAJAAAAGAAAADcFNlzjWQFAqP8wkMjmHECpGtRwo5XSPw==</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="564d21c0-b824-4ab8-b672-fe8b99ab2675">
+      <name>CP2_Kd_row2</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAADAAAAAQAAAAAAAAAJAAAAGAAAAPNbC6E8494/r5PskmG2JUDTJ4wMupBKQA==</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="08d7f6f7-1b27-4151-9a29-dec2a92edd8f">
+      <name>CP2_Kd_row3</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAADAAAAAQAAAAAAAAAJAAAAGAAAANceDDpamApA0y0LutE9wj/tLEFHUwZrQA==</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="1edb5a26-0d94-4860-8d55-133fb38fd36e">
+      <name>CP2_Kp_row1</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAADAAAAAQAAAAAAAAAJAAAAGAAAAITMzpauxZJA8/yXgvWbWkAf0vGwPfZ9QA==</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="24cfd6ca-7cb2-4d44-be2d-108e97a87335">
+      <name>CP2_Kp_row2</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAADAAAAAQAAAAAAAAAJAAAAGAAAAFvUEAskzRBAXKC/zex+kkCmu/Uu1J6TQA==</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="105e1617-442e-49e6-bea0-cf04f2059c65">
+      <name>CP2_Kp_row3</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAADAAAAAQAAAAAAAAAJAAAAGAAAAIVjYhrzODNAYS+L2PVpY0CwcskePhHLQA==</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="061942f2-8bee-4b01-9a83-e2f6797e9fab">
+      <name>H</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAJqZmZmZmck/</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="0b33edb8-c5a3-49da-bff6-7005e3a56050">
+      <name>L</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAJqZmZmZmbk/</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="6ed22531-5574-4771-a577-3c9273bd8f74">
+      <name>MActual</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAOA/</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="537560d1-3ff7-429b-89c8-832aa91971a2">
+      <name>MPlanned</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAOA/</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="58fe4d7e-b035-47a5-ac68-5116a0fc20e2">
+      <name>P0</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAMAAAABAAAAAQAAAAAAAAAJAAAAGAAAAJqZmZmZmbk/mpmZmZmZqT8AAAAAAADQPw==</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="73fb58a5-299d-42e9-af3d-96314daf62ad">
+      <name>Pf</name>
+      <value>AAFJTQAAAAAOAAAASAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAMAAAABAAAAAQAAAAAAAAAJAAAAGAAAAAAAAAAAANA/MzMzMzMzw79mZmZmZmbWPw==</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="87cecad4-b13f-41d9-a3df-bbd936fed27e">
+      <name>T</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAABA</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <referencedModelWorkspaceVariables type="slsa.mm.Variable" uuid="ba09f766-a1e7-4553-affd-42dcd94aa318">
+      <name>elbows</name>
+      <value>AAFJTQAAAAAOAAAAQAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAACAAAAAQAAAAAAAAAJAAAAEAAAAAAAAAAAAPA/AAAAAAAA8D8=</value>
+      <workspace>model-workspace</workspace>
+    </referencedModelWorkspaceVariables>
+    <flags type="slsa.mm.MaskTreeFlags" uuid="6a864e68-6d3f-4e3b-84e0-37984973297f"/>
+  </slsa.mm.MaskTree>
+</MF0>
