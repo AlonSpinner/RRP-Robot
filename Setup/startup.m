@@ -1,10 +1,13 @@
 project=simulinkproject();
 projectRoot=project.RootFolder;
 
-myCacheFolder = fullfile(projectRoot,'Cash');
-
+%% Set Cache Folder
 Simulink.fileGenControl('set',...
-    'CacheFolder',myCacheFolder,...
+    'CacheFolder',fullfile(projectRoot,'Cash'),...
     'createDir',true);
 
-clear project projectRoot myCacheFolder
+%% Enable library in browser
+% set_param('RRProbotLibrary','EnableLBRepository','on');
+slblocks();
+%% clear variables used
+clear project projectRoot
