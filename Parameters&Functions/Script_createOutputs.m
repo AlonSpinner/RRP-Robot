@@ -1,5 +1,5 @@
 %% Setup
-RunName='Adaptive, Mplanned=0.5[kg], Mactual=1[kg], P0actualZ=0.35[cm]';
+RunName='PID, Mplanned=0.5[kg], Mactual=0[kg], P0actualZ=0.35[cm] - UPDATED';
 
 project=simulinkproject();
 projectRoot=project.RootFolder;
