@@ -5,7 +5,7 @@ RRP Robot simulation with 5 different controllers
 
 1) Full Dynamics equations including sensor discretization and flitering
 2) Inverse Kinematics for motion planning
-3) five different controllers: 
+3) five different controllers: </br>
 	a) inverse dynamics + PD </br>
 	b) PD+G </br>
 	c) PID </br>
